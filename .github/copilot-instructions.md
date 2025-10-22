@@ -1,6 +1,6 @@
-# [PROJECT NAME] Development Guidelines
+# halloween_party Development Guidelines
 
-Auto-generated from all feature plans. Last updated: [DATE]
+Auto-generated from all feature plans. Last updated: 2025-10-22
 
 ## Constitutional Requirements
 
@@ -13,25 +13,27 @@ Auto-generated from all feature plans. Last updated: [DATE]
 
 ## Active Technologies
 
-[EXTRACTED FROM ALL PLAN.MD FILES]
+- JavaScript/TypeScript with Node.js 18+ runtime + Next.js 14+ (React framework), Tailwind CSS 3+ (styling), React (UI components) (001-halloween-code-game)
 
 ## Project Structure
 
 ```text
-[ACTUAL STRUCTURE FROM PLANS]
+backend/
+frontend/
+tests/
 ```
 
 ## Commands
 
-[ONLY COMMANDS FOR ACTIVE TECHNOLOGIES]
+npm test && npm run lint
 
 ## Code Style
 
-[LANGUAGE-SPECIFIC, ONLY FOR LANGUAGES IN USE]
+JavaScript/TypeScript with Node.js 18+ runtime: Follow standard conventions
 
 ## Recent Changes
 
-[LAST 3 FEATURES AND WHAT THEY ADDED]
+- 001-halloween-code-game: Added JavaScript/TypeScript with Node.js 18+ runtime + Next.js 14+ (React framework), Tailwind CSS 3+ (styling), React (UI components)
 
 <!-- MANUAL ADDITIONS START -->
 <!-- MANUAL ADDITIONS END -->

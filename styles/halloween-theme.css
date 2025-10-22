@@ -1,0 +1,91 @@
+/* Halloween Theme CSS Variables and Animations */
+
+:root {
+  --halloween-orange: #ff6b35;
+  --halloween-purple: #8b5cf6;
+  --halloween-dark: #0a0a0a;
+  --halloween-gray: #1a1a1a;
+  --halloween-light: #f5f5f5;
+  --halloween-red: #dc2626;
+}
+
+/* Spooky Animations */
+@keyframes spooky-glow {
+  0% {
+    text-shadow: 0 0 5px var(--halloween-orange);
+    box-shadow: 0 0 10px var(--halloween-orange);
+  }
+  50% {
+    text-shadow: 0 0 20px var(--halloween-orange), 0 0 30px var(--halloween-orange);
+    box-shadow: 0 0 30px var(--halloween-orange), 0 0 40px var(--halloween-orange);
+  }
+  100% {
+    text-shadow: 0 0 5px var(--halloween-orange);
+    box-shadow: 0 0 10px var(--halloween-orange);
+  }
+}
+
+@keyframes text-flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow: 0 0 4px var(--halloween-red);
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+    opacity: 0.8;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-error {
+  0%, 100% {
+    background-color: var(--halloween-red);
+    opacity: 0.8;
+  }
+  50% {
+    background-color: var(--halloween-dark);
+    opacity: 1;
+  }
+}
+
+/* Halloween-specific utility classes */
+.halloween-glow {
+  animation: spooky-glow 2s ease-in-out infinite alternate;
+}
+
+.halloween-flicker {
+  animation: text-flicker 1.5s linear infinite;
+}
+
+.halloween-fade-in {
+  animation: fade-in-up 0.6s ease-out;
+}
+
+.halloween-pulse-error {
+  animation: pulse-error 0.5s ease-in-out;
+}
+
+/* Dark theme Halloween effects */
+.halloween-background {
+  background: linear-gradient(135deg, var(--halloween-dark) 0%, var(--halloween-gray) 50%, var(--halloween-dark) 100%);
+  min-height: 100vh;
+}
+
+.halloween-card-shadow {
+  box-shadow: 0 8px 32px rgba(255, 107, 53, 0.2), 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.halloween-border {
+  border: 2px solid var(--halloween-orange);
+  border-image: linear-gradient(45deg, var(--halloween-orange), var(--halloween-purple)) 1;
+}

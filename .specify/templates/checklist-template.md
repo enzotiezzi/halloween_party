@@ -16,21 +16,33 @@
   - Technical context from plan.md
   - Implementation details from tasks.md
   
+  Constitutional checks MUST be included in all checklists.
+  
   DO NOT keep these sample items in the generated checklist file.
   ============================================================================
 -->
 
+## Constitutional Compliance (MANDATORY)
+
+- [ ] CHK001 All automated quality gates pass (linting, formatting, type checking, security)
+- [ ] CHK002 Performance benchmarks met (page loads <3s, API responses <500ms)
+- [ ] CHK003 Test coverage exceeds 80% with tests completing in <5 minutes
+- [ ] CHK004 Accessibility compliance verified (WCAG 2.1 AA standards)
+- [ ] CHK005 Structured logging, metrics, and error tracking implemented
+- [ ] CHK006 UX consistency with design system verified
+- [ ] CHK007 Code documentation updated for all public APIs
+
 ## [Category 1]
 
-- [ ] CHK001 First checklist item with clear action
-- [ ] CHK002 Second checklist item
-- [ ] CHK003 Third checklist item
+- [ ] CHK010 First checklist item with clear action
+- [ ] CHK011 Second checklist item
+- [ ] CHK012 Third checklist item
 
 ## [Category 2]
 
-- [ ] CHK004 Another category item
-- [ ] CHK005 Item with specific criteria
-- [ ] CHK006 Final item in this category
+- [ ] CHK020 Another category item
+- [ ] CHK021 Item with specific criteria
+- [ ] CHK022 Final item in this category
 
 ## Notes
 

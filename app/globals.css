@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Gothic+A1:wght@400;600;700&display=swap');
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+  
+  body {
+    @apply bg-halloween-dark text-white font-gothic;
+  }
+}
+
+@layer components {
+  .spooky-container {
+    @apply min-h-screen bg-gradient-to-b from-halloween-dark via-halloween-gray to-halloween-dark;
+  }
+  
+  .halloween-card {
+    @apply bg-halloween-gray border border-halloween-orange/20 rounded-lg shadow-2xl;
+  }
+  
+  .spooky-text {
+    @apply text-halloween-orange font-spooky text-shadow-lg;
+  }
+  
+  .error-text {
+    @apply text-halloween-red animate-text-flicker;
+  }
+  
+  .success-text {
+    @apply text-halloween-purple animate-spooky-glow;
+  }
+}
+
+@keyframes spooky-glow {
+  from { text-shadow: 0 0 5px currentColor; }
+  to { text-shadow: 0 0 20px currentColor, 0 0 30px currentColor; }
+}
+
+@keyframes text-flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% { text-shadow: 0 0 4px currentColor; }
+  20%, 24%, 55% { text-shadow: none; }
+}

@@ -95,6 +95,14 @@
 - **FR-006**: System MUST authenticate users via [NEEDS CLARIFICATION: auth method not specified - email/password, SSO, OAuth?]
 - **FR-007**: System MUST retain user data for [NEEDS CLARIFICATION: retention period not specified]
 
+### Constitutional Requirements (MANDATORY)
+
+- **CR-001**: All user interfaces MUST comply with design system and WCAG 2.1 AA accessibility standards
+- **CR-002**: System MUST meet performance benchmarks: page loads <3s, API responses <500ms
+- **CR-003**: Feature MUST include comprehensive logging, metrics collection, and error tracking
+- **CR-004**: Code MUST pass automated quality gates: linting, type checking, security scanning
+- **CR-005**: Test coverage MUST exceed 80% with tests completing in <5 minutes
+
 ### Key Entities *(include if feature involves data)*
 
 - **[Entity 1]**: [What it represents, key attributes without implementation]
@@ -113,3 +121,11 @@
 - **SC-002**: [Measurable metric, e.g., "System handles 1000 concurrent users without degradation"]
 - **SC-003**: [User satisfaction metric, e.g., "90% of users successfully complete primary task on first attempt"]
 - **SC-004**: [Business metric, e.g., "Reduce support tickets related to [X] by 50%"]
+
+### Constitutional Success Criteria
+
+- **CSC-001**: All automated quality gates pass (100% linting, type checking, security scanning)
+- **CSC-002**: Performance benchmarks met (page loads <3s, API <500ms, 95th percentile documented)
+- **CSC-003**: Accessibility compliance verified (WCAG 2.1 AA standards met)
+- **CSC-004**: Test coverage exceeds 80% with all tests passing in under 5 minutes
+- **CSC-005**: Observability implemented (structured logging, metrics, error tracking active)

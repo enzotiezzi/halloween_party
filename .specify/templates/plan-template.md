@@ -31,7 +31,11 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- [ ] **Code Quality First**: Automated quality gates planned (linting, formatting, type checking, security scanning)
+- [ ] **UX Consistency**: Design system compliance and accessibility standards (WCAG 2.1 AA) addressed
+- [ ] **Performance Standards**: Performance benchmarks defined (page loads <3s, API responses <500ms, 95th percentile documented)
+- [ ] **Test-Driven Development**: Test strategy planned (unit, integration, e2e tests with >80% coverage, <5min runtime)
+- [ ] **Observability & Monitoring**: Logging, metrics, error tracking, and monitoring strategy defined
 
 ## Project Structure
 

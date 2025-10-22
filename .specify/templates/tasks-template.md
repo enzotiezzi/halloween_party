@@ -8,7 +8,7 @@ description: "Task list template for feature implementation"
 **Input**: Design documents from `/specs/[###-feature-name]/`
 **Prerequisites**: plan.md (required), spec.md (required for user stories), research.md, data-model.md, contracts/
 
-**Tests**: The examples below include test tasks. Tests are OPTIONAL - only include them if explicitly requested in the feature specification.
+**Tests**: Tests are MANDATORY per constitution (Test-Driven Development principle). All user stories must include unit, integration, and appropriate end-to-end tests with >80% coverage.
 
 **Organization**: Tasks are grouped by user story to enable independent implementation and testing of each story.
 
@@ -69,6 +69,14 @@ Examples of foundational tasks (adjust based on your project):
 - [ ] T008 Configure error handling and logging infrastructure
 - [ ] T009 Setup environment configuration management
 
+### Constitutional Foundation Tasks (MANDATORY)
+
+- [ ] T010 [P] Setup automated quality gates (linting, formatting, type checking, security scanning)
+- [ ] T011 [P] Configure performance monitoring and alerting infrastructure
+- [ ] T012 [P] Implement structured logging framework with metrics collection
+- [ ] T013 [P] Setup accessibility testing tools and design system compliance
+- [ ] T014 [P] Configure test framework with coverage reporting (target >80%)
+
 **Checkpoint**: Foundation ready - user story implementation can now begin in parallel
 
 ---
@@ -79,21 +87,25 @@ Examples of foundational tasks (adjust based on your project):
 
 **Independent Test**: [How to verify this story works on its own]
 
-### Tests for User Story 1 (OPTIONAL - only if tests requested) ⚠️
+### Tests for User Story 1 (MANDATORY per Constitution) ⚠️
 
-> **NOTE: Write these tests FIRST, ensure they FAIL before implementation**
+> **NOTE: Write these tests FIRST, ensure they FAIL before implementation (TDD principle)**
 
-- [ ] T010 [P] [US1] Contract test for [endpoint] in tests/contract/test_[name].py
-- [ ] T011 [P] [US1] Integration test for [user journey] in tests/integration/test_[name].py
+- [ ] T015 [P] [US1] Contract test for [endpoint] in tests/contract/test_[name].py
+- [ ] T016 [P] [US1] Integration test for [user journey] in tests/integration/test_[name].py
+- [ ] T017 [P] [US1] Unit tests for business logic with >80% coverage
+- [ ] T018 [P] [US1] Performance tests to verify constitutional benchmarks
+- [ ] T019 [P] [US1] Accessibility tests for UI components (WCAG 2.1 AA)
 
 ### Implementation for User Story 1
 
-- [ ] T012 [P] [US1] Create [Entity1] model in src/models/[entity1].py
-- [ ] T013 [P] [US1] Create [Entity2] model in src/models/[entity2].py
-- [ ] T014 [US1] Implement [Service] in src/services/[service].py (depends on T012, T013)
-- [ ] T015 [US1] Implement [endpoint/feature] in src/[location]/[file].py
-- [ ] T016 [US1] Add validation and error handling
-- [ ] T017 [US1] Add logging for user story 1 operations
+- [ ] T020 [P] [US1] Create [Entity1] model in src/models/[entity1].py
+- [ ] T021 [P] [US1] Create [Entity2] model in src/models/[entity2].py
+- [ ] T022 [US1] Implement [Service] in src/services/[service].py (depends on T020, T021)
+- [ ] T023 [US1] Implement [endpoint/feature] in src/[location]/[file].py
+- [ ] T024 [US1] Add validation and error handling with structured logging
+- [ ] T025 [US1] Add metrics collection and monitoring for user story operations
+- [ ] T026 [US1] Implement accessibility features per design system requirements
 
 **Checkpoint**: At this point, User Story 1 should be fully functional and testable independently
 
@@ -105,17 +117,20 @@ Examples of foundational tasks (adjust based on your project):
 
 **Independent Test**: [How to verify this story works on its own]
 
-### Tests for User Story 2 (OPTIONAL - only if tests requested) ⚠️
+### Tests for User Story 2 (MANDATORY per Constitution) ⚠️
 
-- [ ] T018 [P] [US2] Contract test for [endpoint] in tests/contract/test_[name].py
-- [ ] T019 [P] [US2] Integration test for [user journey] in tests/integration/test_[name].py
+- [ ] T030 [P] [US2] Contract test for [endpoint] in tests/contract/test_[name].py
+- [ ] T031 [P] [US2] Integration test for [user journey] in tests/integration/test_[name].py
+- [ ] T032 [P] [US2] Unit tests for business logic with >80% coverage
+- [ ] T033 [P] [US2] Performance tests to verify constitutional benchmarks
 
 ### Implementation for User Story 2
 
-- [ ] T020 [P] [US2] Create [Entity] model in src/models/[entity].py
-- [ ] T021 [US2] Implement [Service] in src/services/[service].py
-- [ ] T022 [US2] Implement [endpoint/feature] in src/[location]/[file].py
-- [ ] T023 [US2] Integrate with User Story 1 components (if needed)
+- [ ] T035 [P] [US2] Create [Entity] model in src/models/[entity].py
+- [ ] T036 [US2] Implement [Service] in src/services/[service].py
+- [ ] T037 [US2] Implement [endpoint/feature] in src/[location]/[file].py
+- [ ] T038 [US2] Integrate with User Story 1 components (if needed)
+- [ ] T039 [US2] Add structured logging and metrics collection
 
 **Checkpoint**: At this point, User Stories 1 AND 2 should both work independently
 
@@ -127,16 +142,18 @@ Examples of foundational tasks (adjust based on your project):
 
 **Independent Test**: [How to verify this story works on its own]
 
-### Tests for User Story 3 (OPTIONAL - only if tests requested) ⚠️
+### Tests for User Story 3 (MANDATORY per Constitution) ⚠️
 
-- [ ] T024 [P] [US3] Contract test for [endpoint] in tests/contract/test_[name].py
-- [ ] T025 [P] [US3] Integration test for [user journey] in tests/integration/test_[name].py
+- [ ] T045 [P] [US3] Contract test for [endpoint] in tests/contract/test_[name].py
+- [ ] T046 [P] [US3] Integration test for [user journey] in tests/integration/test_[name].py
+- [ ] T047 [P] [US3] Unit tests for business logic with >80% coverage
 
 ### Implementation for User Story 3
 
-- [ ] T026 [P] [US3] Create [Entity] model in src/models/[entity].py
-- [ ] T027 [US3] Implement [Service] in src/services/[service].py
-- [ ] T028 [US3] Implement [endpoint/feature] in src/[location]/[file].py
+- [ ] T050 [P] [US3] Create [Entity] model in src/models/[entity].py
+- [ ] T051 [US3] Implement [Service] in src/services/[service].py
+- [ ] T052 [US3] Implement [endpoint/feature] in src/[location]/[file].py
+- [ ] T053 [US3] Add constitutional compliance (logging, metrics, performance)
 
 **Checkpoint**: All user stories should now be independently functional
 
@@ -148,14 +165,16 @@ Examples of foundational tasks (adjust based on your project):
 
 ## Phase N: Polish & Cross-Cutting Concerns
 
-**Purpose**: Improvements that affect multiple user stories
+**Purpose**: Final constitutional compliance validation and system-wide improvements
 
-- [ ] TXXX [P] Documentation updates in docs/
-- [ ] TXXX Code cleanup and refactoring
-- [ ] TXXX Performance optimization across all stories
-- [ ] TXXX [P] Additional unit tests (if requested) in tests/unit/
-- [ ] TXXX Security hardening
-- [ ] TXXX Run quickstart.md validation
+- [ ] T060 [P] Documentation updates in docs/
+- [ ] T061 Code cleanup and refactoring to meet quality standards
+- [ ] T062 Performance optimization to meet constitutional benchmarks
+- [ ] T063 [P] Constitutional compliance audit (all quality gates, performance, accessibility)
+- [ ] T064 Security hardening and vulnerability assessment
+- [ ] T065 Final test coverage validation (>80% requirement)
+- [ ] T066 Observability dashboard and alerting verification
+- [ ] T067 Run quickstart.md validation
 
 ---
 
