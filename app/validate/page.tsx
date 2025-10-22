@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import { Navigation, BackButton } from '@/components/Navigation';
 import { MESSAGES } from '@/lib/messages';
 import { validationService, type ValidationResult } from '@/lib/validation';
@@ -9,6 +10,7 @@ import { cn, a11yUtils, performanceUtils, debounce } from '@/lib/utils';
 interface ValidationPageProps {}
 
 export default function ValidationPage({}: ValidationPageProps) {
+  const router = useRouter();
   const [code, setCode] = useState('');
   const [isValidating, setIsValidating] = useState(false);
   const [validationResult, setValidationResult] = useState<ValidationResult | null>(null);
@@ -61,7 +63,8 @@ export default function ValidationPage({}: ValidationPageProps) {
     try {
       const result = await validationService.validateCode(code);
       setValidationResult(result);
-      setAttempts(prev => prev + 1);
+      const newAttempts = attempts + 1;
+      setAttempts(newAttempts);
 
       // Announce result to screen readers
       const announcement = result.isValid 
@@ -73,6 +76,13 @@ export default function ValidationPage({}: ValidationPageProps) {
       // Measure performance
       if (measureValidation.current) {
         measureValidation.current();
+      }
+
+      // Redirect to dedicated feedback page
+      if (result.isValid) {
+        router.push('/success');
+      } else {
+        router.push(`/error-page?attempts=${newAttempts}`);
       }
 
     } catch (error) {

@@ -34,6 +34,10 @@
   .success-text {
     @apply text-halloween-purple animate-spooky-glow;
   }
+
+  .bg-gradient-radial {
+    background: radial-gradient(circle, var(--tw-gradient-stops));
+  }
 }
 
 @keyframes spooky-glow {
