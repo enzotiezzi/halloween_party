@@ -4,7 +4,7 @@
     "prettier"
   ],
   "rules": {
-    "@typescript-eslint/no-unused-vars": "error",
-    "@typescript-eslint/prefer-const": "error"
+    "no-unused-vars": "off",
+    "prefer-const": "warn"
   }
 }

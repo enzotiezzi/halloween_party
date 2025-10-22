@@ -6,6 +6,7 @@ import { MESSAGES } from '@/lib/messages'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'),
   title: 'Halloween Party Code Game',
   description: 'Um jogo misterioso de códigos para a festa de Halloween. Descubra os segredos e desvende as pistas.',
   keywords: ['halloween', 'jogo', 'código', 'mistério', 'festa'],
