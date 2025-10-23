@@ -90,9 +90,6 @@ export default function HomePage() {
               Você descobriu um código misterioso! Agora é hora de validá-lo e descobrir 
               o que os detetives estão procurando...
             </p>
-            <p className="text-sm text-gray-500">
-              Clique no botão acima para inserir o código e desvendar o próximo mistério.
-            </p>
           </div>
         </div>
       </section>

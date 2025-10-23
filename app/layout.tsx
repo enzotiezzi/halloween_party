@@ -93,7 +93,7 @@ export default function RootLayout({
             aria-label={MESSAGES.ACCESSIBILITY.FOOTER}
           >
             <p className="animate-text-flicker">
-              👻 Halloween Party 2024 - Prepare-se para os sustos... 🎃
+              👻 Halloween Party 2025 - Prepare-se para os sustos... 🎃
             </p>
           </footer>
         </div>
